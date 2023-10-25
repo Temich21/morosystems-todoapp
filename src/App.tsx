@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Header } from './components/Header/Header'
+import ToDoComponent from './components/ToDoComponent/ToDoComponent'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import { store, persistor } from './redux/store'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // Provider slouži abychom mohli vyvolat to do seznam v jaké koliv urovně
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Header />
+        <ToDoComponent />
+      </PersistGate>
+    </Provider>
+  )
 }
 
 export default App;

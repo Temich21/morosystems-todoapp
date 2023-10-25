@@ -1,0 +1,327 @@
+
+.inputSection {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+.inputText {
+    width: 500px;
+    border-radius: 0.5rem;
+}
+
+.inputTime {
+    width: 245px;
+    border-radius: 0.5rem;
+}
+
+.button {
+    width: 80px;
+}
+
+.tasksSection {
+    font-size: 1.3rem;
+}
+
+.tasks {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.task {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.taskContent {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.taskText {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* border: solid 1px; */
+}
+
+.taskText input {
+    width: 100%;
+    border: none;
+}
+
+.taskTime {
+    width: 245px;
+    /* border: solid 1px; */
+}
+
+.icons {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon {
+    height: 25px;
+}
+
+.sortBar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.completedBar {
+    height: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.completedBar div {
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.completedBarSort {
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    margin-bottom:0;
+}
+
+.completedBarSort li  {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.noTasks {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.taskSort {
+    width: 245px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.taskSort label, .taskSortList {
+    font-size: 1.2rem;
+}
+
+.active {
+    border: solid;
+}
+
+@media (max-width: 880px) {
+    .inputSection {
+        font-size: 1.3rem;
+    }
+
+    .inputText {
+        width: 450px;
+        border-radius: 0.5rem;
+    }
+    
+    .inputTime {
+        width: 220px;
+        border-radius: 0.5rem;
+    }
+    
+    .button {
+        width: 80px;
+    }
+
+    .tasksSection {
+        font-size: 1rem;
+    }
+
+    .taskText {
+        width: 450px;
+    }
+
+    .taskTime {
+        width: 220px;
+    }
+
+    .completedBar {
+        height: 50px;
+        width: 450px;
+        font-size: 1rem;
+    }
+
+    .taskSort label, .taskSortList {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .inputSection {
+        font-size: 1rem;
+    }
+
+    .inputText {
+        width: 350px;
+        border-radius: 0.5rem;
+    }
+    
+    .inputTime {
+        width: 150px;
+        border-radius: 0.5rem;
+    }
+    
+    .button {
+        width: 70px;
+    }
+
+    .tasksSection {
+        font-size: 1rem;
+    }
+
+    .taskText {
+        width: 350px;
+    }
+
+    .taskTime {
+        width: 150px;
+    }
+
+    .completedBar {
+        height: 50px;
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .completedBar div {
+        padding-left: 2rem;
+    }
+
+    .taskSort label, .taskSortList {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .main {
+        width: 420px;
+    }
+
+    .inputSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-template-rows: auto auto; /* Two rows */
+        grid-template-areas:
+        "a c"
+        "b b";
+    }
+
+    .inputText {
+        width: 350px;
+        border-radius: 0.5rem;
+        grid-area: a;
+    }
+    
+    .inputTime {
+        width: 150px;
+        border-radius: 0.5rem;
+        grid-area: b;
+    }
+    
+    .button {
+        width: 60px;
+        grid-area: c;
+    }
+
+    .tasksSection {
+        font-size: 1rem;
+    }
+
+    .taskText {
+        width: 350px;
+    }
+
+    .taskTime {
+        width: 150px;
+        padding-left: 1.5rem;
+    }
+
+    .taskContent {
+        flex-direction: column;
+    }
+
+    .completedBar {
+        height: 50px;
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    .taskSort label, .taskSortList {
+        font-size: 1rem;
+    }
+
+    .sortBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taskSort {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        width: 320px;
+    }
+
+    .inputSection {
+        font-size: 0.8rem;
+    }
+
+    .inputText {
+        width: 250px;
+        border-radius: 0.5rem;
+    }
+    
+    .inputTime {
+        width: 120px;
+        border-radius: 0.5rem;
+    }
+    
+    .button {
+        width: 60px;
+    }
+
+    .tasksSection {
+        font-size: 0.8rem;
+    }
+
+    .taskText {
+        width: 250px;
+    }
+
+    .taskTime {
+        width: 150px;
+    }
+
+    .completedBar {
+        width: 250px;
+        font-size: 0.8rem;
+    }
+
+    .taskSort label, .taskSortList {
+        font-size: 0.8rem;
+    }
+}
